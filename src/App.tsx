@@ -19,7 +19,6 @@ function App() {
   const handleWinner = (cards: Card[]) => {
     setIsWinner(evaluateWinner(cards));
   };
-  console.log(initialDeck);
   return (
     <div className="App">
       <div className="header">
