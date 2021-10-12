@@ -26,7 +26,11 @@ function App() {
     <div className="App">
       {isWinner && <Confetti width={width} height={height} />}
       <div className="header">
-        <a href="#" id="logo">
+        <a
+          href="https://www.shopify.ca/careers/teams/engineering"
+          target="_blank"
+          id="logo"
+        >
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Shopify_logo_2018.svg/2560px-Shopify_logo_2018.svg.png"
             alt=""
