@@ -3,6 +3,8 @@ import "./App.css";
 import Board from "./Board";
 import { Card } from "./deck";
 import { useLoteria } from "./useLoteria";
+import useWindowSize from "react-use/lib/useWindowSize";
+import Confetti from "react-confetti";
 
 function App() {
   const {
@@ -19,8 +21,10 @@ function App() {
   const handleWinner = (cards: Card[]) => {
     setIsWinner(evaluateWinner(cards));
   };
+  const { width, height } = useWindowSize();
   return (
     <div className="App">
+      {isWinner && <Confetti width={width} height={height} />}
       <div className="header">
         <a href="#" id="logo">
           <img
@@ -49,7 +53,6 @@ function App() {
               </a>
             </span>
           </h1>
-          <h1>{isWinner && "ES LA BUENA"}</h1>
         </header>
         <div className="gameBoard">
           <div className="mainBoard">
@@ -97,6 +100,7 @@ function App() {
             </div>
           </div>
         </div>
+        <h1 className="es-la-buena pulse">{isWinner && "Es La Buena"}</h1>
         <span id="specialThanks">
           Special Thanks to{" "}
           <a href="https://twitter.com/xnt" target="_blank">
