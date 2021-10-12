@@ -1,0 +1,62 @@
+.myBoard {
+  display: flex;
+  flex-wrap: wrap;
+}
+.myCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+  border: 15px solid #fff;
+  border-radius: 10px;
+  padding: 15px 10px;
+  width: 75px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.myCard.active {
+  transform: scale(0.8);
+  background: #008060;
+}
+.myCard__emoji {
+  font-size: 40px;
+  margin: 0 0 15px;
+}
+.winnerButton {
+  display: inline-block;
+  padding: 1em 1.8125em;
+  border-radius: 4px;
+  font-family: ShopifySans, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 1.133;
+  transition: 150ms ease;
+  transition-property: background-color, border-color, box-shadow, color;
+  text-align: center;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  box-shadow: 0 5px 15px 0 rgb(0 0 0 / 15%);
+  background-color: #008060;
+  color: #ffffff;
+  border-style: solid;
+  border-color: #008060;
+  border-width: 0.125em;
+  width: 80%;
+}
+.winnerButton:hover {
+  box-shadow: 0 5px 25px 0 rgb(0 0 0 / 25%);
+  background-color: transparent;
+}
+.winnerButton:active {
+  border-color: #002e25;
+}
+.winnerButton:disabled {
+  box-shadow: 0 5px 15px 0 rgb(0 0 0 / 15%);
+  background-color: #828a91;
+  color: #ffffff;
+  cursor: not-allowed;
+}
