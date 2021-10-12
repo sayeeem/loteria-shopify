@@ -108,7 +108,7 @@ function App() {
         <span id="specialThanks">
           Special Thanks to{" "}
           <a href="https://twitter.com/xnt" target="_blank">
-            Vincente Plata
+            Vicente Plata
           </a>{" "}
           and{" "}
           <a href="https://twitter.com/The_NaoX" target="_blank">
